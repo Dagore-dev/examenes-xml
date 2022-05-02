@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="proyecto" type="T_proyecto"/>
+
+  <!-- Tipo complejo => T_ proyecto -->
+  <xs:complexType name="T_proyecto">
+    <xs:sequence>
+      <xs:element 
+        name="datos_proyecto"
+        type="T_datos_proyecto"
+      />
+      <xs:element
+        name="dedicatoria"
+        type="T_dedicatoria"
+        minOccurs="0"
+      />
+      <xs:element 
+        name="apartado"
+        type="T_apartado"
+        maxOccurs="unbounded"
+      />
+    </xs:sequence>
+    <xs:attribute name="lang" type="T_lang"/>
+  </xs:complexType>
+
+  <!-- Tipo simple => T_lang -->
+  <xs:simpleType name="T_lang">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="es" />
+      <xs:enumeration value="en" />
+      <xs:enumeration value="fr" />
+      <xs:enumeration value="ge" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Tipo complejo => T_datos_proyecto -->
+  <xs:complexType name="T_datos_proyecto">
+    <xs:sequence>
+      <xs:element 
+        name="titulo"
+        type="xs:string"
+      />
+      <xs:element 
+        name="autor"
+        type="T_autor"
+        maxOccurs="unbounded"
+      />
+      <xs:element 
+        name="fecha_publicacion"
+        type="xs:date"
+      />
+      <xs:element 
+        name="paginas"
+        type="T_paginas"
+      />
+      <xs:element 
+        name="bibliografia"
+        type="T_bibliografia"
+      />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipo complejo => autor -->
+  <xs:complexType name="T_autor">
+    <xs:sequence>
+      <xs:element 
+        name="nombre"
+        type="xs:string"
+      />
+      <xs:element 
+        name="apellidos"
+        type="xs:string"
+      />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipo simple => T_paginas -->
+  <xs:simpleType name="T_paginas">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="100" />
+      <xs:maxInclusive value="200" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Tipo complejo => T_bibliografia -->
+  <xs:complexType name="T_bibliografia">
+    <xs:sequence>
+      <xs:element
+        name="referencia"
+        type="T_referencia"
+        maxOccurs="unbounded"
+      />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipo simple => T_referencia -->
+  <xs:complexType name="T_referencia">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="enlace" type="xs:anyURI"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!-- Tipo complejo => T_dedicatoria -->
+  <xs:complexType name="T_dedicatoria">
+    <xs:sequence>
+      <xs:element 
+        name="parrafo"
+        type="T_parrafo"
+      />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipo complejo => T_parrafo -->
+  <xs:complexType name="T_parrafo">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="estilo" type="T_estilo" default="normal"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!-- Tipo simple => T_estilo -->
+  <xs:simpleType name="T_estilo">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="cita" />
+      <xs:enumeration value="codigo" />
+      <xs:enumeration value="revisar" />
+      <xs:enumeration value="normal" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Tipo complejo => T_apartado -->
+  <xs:complexType name="T_apartado">
+    <xs:sequence>
+      <xs:element 
+        name="titulo"
+        type="xs:string"
+      />
+      <xs:element
+        name="seccion"
+        type="T_seccion"
+        minOccurs="0"
+        maxOccurs="unbounded"
+      />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+  </xs:complexType>
+
+  <!-- Tipo complejo => T_seccion -->
+  <xs:complexType name="T_seccion">
+    <xs:sequence>
+      <xs:element
+        name="titulo"
+        type="xs:string"
+      />
+      <xs:element
+        name="parrafo"
+        type="T_parrafo"
+        minOccurs="0"
+        maxOccurs="unbounded"
+      />
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
