@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <!-- Elemento raiz de tipo T_filmotea -->
+  <xs:element name="filmoteca" type="T_filmoteca"/>
+
+  <!-- Tipo complejo => T_filmoteca -->
+  <xs:complexType name="T_filmoteca">
+    <xs:sequence>
+      <xs:element 
+        name="propietario" 
+        type="xs:string"
+        maxOccurs="unbounded"
+      />
+      <xs:element
+        name="precioVenta"
+        type="T_precio"
+        minOccurs="0"
+      />
+      <xs:element
+        name="peliculas"
+        type="T_peliculas"
+      />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipo simple => T_precio -->
+  <xs:simpleType name="T_precio">
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Tipo complejo => T_peliculas -->
+  <xs:complexType name="T_peliculas">
+    <xs:sequence>
+      <xs:element
+        name="pelicula"
+        type="T_pelicula"
+        minOccurs="0"
+        maxOccurs="unbounded"
+      />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipo complejo => T_pelicula -->
+  <xs:complexType name="T_pelicula">
+    <xs:sequence>
+      <xs:element 
+        name="titulo"
+        type="xs:string"
+      />
+      <xs:element
+        name="tituloOriginal"
+        type="T_tituloOriginal"
+        minOccurs="0"
+      />
+      <xs:element
+        name="cartel"
+        type="T_cartel"
+      />
+      <xs:element 
+        name="duracion"
+        type="xs:integer"
+      />
+      <xs:element
+        name="director"
+        type="xs:string"
+      />
+      <xs:element
+        name="reparto"
+        type="T_reparto"
+      />
+      <xs:element 
+        name="sinopsis"
+        type="T_sinopsis"
+      />
+    </xs:sequence>
+    <xs:attribute name="codigo" type="xs:ID" use="required"/>
+  </xs:complexType>
+
+  <!-- Tipo complejo => T_tituloOriginal -->
+  <xs:complexType name="T_tituloOriginal">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+      <xs:attribute
+        name="lang" 
+        type="T_idioma"
+      />
+      </xs:extension>      
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!-- Tipo simple => T_idioma -->
+  <xs:simpleType name="T_idioma">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="en" />
+      <xs:enumeration value="es" />
+      <xs:enumeration value="fr" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Tipo complejo => T_cartel -->
+  <xs:complexType name="T_cartel">
+    <xs:attribute name="fuente" type="xs:anyURI" use="required"/>
+  </xs:complexType>
+
+  <!-- Tipo complejo => T_reparto -->
+  <xs:complexType name="T_reparto">
+    <xs:sequence>
+      <xs:element 
+        name="actor"
+        type="xs:string"
+        maxOccurs="unbounded"
+      />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipo complejo => T_sinopsis -->
+  <xs:complexType name="T_sinopsis">
+    <xs:sequence>
+      <xs:element 
+        name="parrafo"
+        type="xs:string"
+        maxOccurs="unbounded"
+      />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
