@@ -14,7 +14,7 @@
       <apellidos>Torvalds</apellidos>
     </autor>
     <fecha_publicacion>2018-12-14</fecha_publicacion>
-    <paginas>144</paginas>
+    <paginas formato="A-4">144</paginas>
     <bibliografia>
       <referencia enlace="http://cica.es/articulo.pdf">Una nueva visión del software web</referencia>
       <referencia enlace="fto://rediris.es/docs/inet.pdf">Un nuevo mapa del nucleo de la red</referencia>

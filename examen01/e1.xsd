@@ -76,13 +76,22 @@
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Tipo simple => T_paginas -->
-  <xs:simpleType name="T_paginas">
+  <!-- Tipo simple => T_paginas_base -->
+  <xs:simpleType name="T_paginas_base">
     <xs:restriction base="xs:integer">
       <xs:minInclusive value="100" />
       <xs:maxInclusive value="200" />
     </xs:restriction>
   </xs:simpleType>
+
+  <!-- Tipo complejo => T_paginas -->
+  <xs:complexType name="T_paginas">
+    <xs:simpleContent>
+      <xs:extension base="T_paginas_base">
+        <xs:attribute name="formato" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <!-- Tipo complejo => T_bibliografia -->
   <xs:complexType name="T_bibliografia">

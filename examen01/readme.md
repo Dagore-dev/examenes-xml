@@ -9,3 +9,4 @@
 - Cada sección está compuesta de un título y cero o más párrafos.
 - Cada apartado tiene un atributo obligatorio `id` que no se puede repetir en la instancia de datos.
 - Cada párrafo tiene un atributo `estilo` con valores `cita`, `codigo`, `revisar` o `normal`. Si no está presente el valor por defecto es `normal`.
+- A posteriori Ango incluye el atributo `formato` del número de páginas.
