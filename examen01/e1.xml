@@ -13,6 +13,10 @@
       <nombre>Linus</nombre>
       <apellidos>Torvalds</apellidos>
     </autor>
+    <autor>
+      <nombre>Richard</nombre>
+      <apellidos>Stallman</apellidos>
+    </autor>
     <fecha_publicacion>2018-12-14</fecha_publicacion>
     <paginas formato="A-4">144</paginas>
     <bibliografia>

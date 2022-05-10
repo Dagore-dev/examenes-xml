@@ -20,6 +20,6 @@
 - Las referencias se transforman en elementos `a` donde el atributo `enlace` pasa a ser `href`.
 - La dedicatoria pasa a ser un elemento `blockquote` donde los elementos `parrafo` pasan a ser `p`.
 - El elemento `texto` contiene los elemento `apartado` con los siguientes cambios:
-  - El elemento `titulo` hijo directo de `apartado` se convierte en un `h2` que empieza con el valor del atributo `id` del apartado entre paréntesis
+  - El elemento `titulo` hijo directo de `apartado` se convierte en un `h2` que empieza con el valor del atributo `id` del apartado entre paréntesis.
   - El elemento `titulo` de las secciones se convierten en `h3`.
   - Los `parrafo` se convierten en `p`.
