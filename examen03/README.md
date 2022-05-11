@@ -18,16 +18,16 @@
 
 - El elemento raíz pasa a ser `favoritos`. Presenta un atributo `propietario` con el valor del elemento `owner`.
 - Si existía el atributo `added` se transforma en un elemento `fecha` hijo directo de la raíz.
-- Cada elemento `bookmark` genera un elemento `item`.
-- Los elementos `bookmark` que no presenta elemento `ranking` o este vale cero no se transforman.
-- Cada elemento `item` contiene:
-  - Elemento `puntos` con el valor del elemento `ranking`.
-  - Elemento `titulo` con valor obtenido el `title` en el elemento `bookmark` contenedor.
-  - Elemento `url` con el valor del enlace.
-  - Elemento `etiquetas` donde aparecen el valor de todas las etiquetas `tag` separadas por `#`.
 - Cada elemento `folder` deja de existir y se transforma en un comentario del tipo:
 ```
   <!-- Comentario:  -->
   <!--{Valor del elemento title del elemento folder}-->
 ```
+- Cada elemento `bookmark` genera un elemento `item`.
+- Los elementos `bookmark` que no presenta elemento `ranking` o este vale cero no se transforman.
 - Los elementos `item` de cada `folder` se ordenan por su `ranking` de mayor a menor.
+- Cada elemento `item` contiene:
+  - Elemento `puntos` con el valor del elemento `ranking`.
+  - Elemento `titulo` con valor obtenido el `title` en el elemento `bookmark` contenedor.
+  - Elemento `url` con el valor del enlace.
+  - Elemento `etiquetas` donde aparecen el valor de todas las etiquetas `tag` separadas por `#`.
