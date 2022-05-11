@@ -21,7 +21,7 @@
 - Cada elemento `bookmark` genera un elemento `item`.
 - Los elementos `bookmark` que no presenta elemento `ranking` o este vale cero no se transforman.
 - Cada elemento `item` contiene:
-  - Elemento `puntos` con el valor del elemento `ranking` si existiera.
+  - Elemento `puntos` con el valor del elemento `ranking`.
   - Elemento `titulo` con valor obtenido el `title` en el elemento `bookmark` contenedor.
   - Elemento `url` con el valor del enlace.
   - Elemento `etiquetas` donde aparecen el valor de todas las etiquetas `tag` separadas por `#`.
