@@ -22,4 +22,5 @@
 - El elemento `texto` contiene los elemento `apartado` con los siguientes cambios:
   - El elemento `titulo` hijo directo de `apartado` se convierte en un `h2` que empieza con el valor del atributo `id` del apartado entre paréntesis.
   - El elemento `titulo` de las secciones se convierten en `h3`.
-  - Los `parrafo` se convierten en `p`.
+  - Los `parrafo` cuyo estilo no es `revisar` se convierten en `p`.
+  

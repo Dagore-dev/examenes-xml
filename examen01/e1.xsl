@@ -115,7 +115,7 @@
                 <xsl:value-of select="titulo" />
               </xsl:element>
 
-              <xsl:for-each select="parrafo">
+              <xsl:for-each select="parrafo[@estilo!='revisar']">
 
                 <xsl:element name="p">
                   <xsl:value-of select="." />
