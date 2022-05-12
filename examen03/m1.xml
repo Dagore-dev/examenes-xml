@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="m1.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <xbel version="1.0" added="2018-12-12">
   <owner>Armando Bronca Segura</owner>
   <desc>Favoritos de clase de Armando.   Guardado para poder importar al reinstalar de  cero el pc y pasar a linux mint</desc>
