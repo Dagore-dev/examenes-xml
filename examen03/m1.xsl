@@ -27,6 +27,9 @@
         
         <!-- El elemento title pasa a ser un comentario -->
         <xsl:comment>
+          <xsl:text> Comentario </xsl:text>
+        </xsl:comment>
+        <xsl:comment>
           <xsl:value-of select="title" />
         </xsl:comment>
         
