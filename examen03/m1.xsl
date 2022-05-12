@@ -33,13 +33,11 @@
           <xsl:value-of select="title" />
         </xsl:comment>
         
-        <xsl:for-each select="bookmark">
+        <!-- Genera solo los items que tienen ranking -->
+        <xsl:for-each select="bookmark[ranking&gt;0]">
           
           <!-- En primer lugar se ordena por ranking -->
           <xsl:sort select="ranking" data-type="number" order="descending" />
-
-          <!-- Genera solo los items que tienen ranking -->
-          <xsl:if test="ranking">
 
             <xsl:element name="item">
                           
@@ -76,7 +74,6 @@
 
             </xsl:element>
 
-          </xsl:if>
         </xsl:for-each>
 
 
