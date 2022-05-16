@@ -1,0 +1,61 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <!-- Elemento raiz -->
+  <xs:element name="inventario" type="T_inventario"/>
+
+  <xs:complexType name="T_inventario">
+    <xs:sequence>
+      <xs:element name="responsable" type="xs:string"/>
+      <xs:element name="mail" type="xs:string"/>
+      <xs:element name="tel" type="T_tel" minOccurs="0" maxOccurs="3"/>
+      <xs:element name="espacio" type="T_espacio" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipo complejo de contenido simple => T_tel -->
+  <xs:complexType name="T_tel">
+    <xs:simpleContent>
+      <xs:extension base="T_tel_number">
+        <xs:attribute name="tipo" type="T_tipo"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!-- Tipo simple => T_tel_number -->
+  <xs:simpleType name="T_tel_number">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{4,8}" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- Tipo simple => T_tipo -->
+  <xs:simpleType name="T_tipo">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="particular" />
+      <xs:enumeration value="trabajo" />
+      <xs:enumeration value="móvil" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Tipo complejo => T_espacio -->
+  <xs:complexType name="T_espacio">
+    <xs:sequence>
+      <xs:element name="nombre " type="xs:string"/>
+      <xs:element name="responsable" type="xs:string"/>
+      <xs:element name="item" type="T_item" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+
+    <xs:attribute name="code" type="xs:ID"/>
+  </xs:complexType>
+
+  <!-- Tipo complejo => T_item -->
+  <xs:complexType name="T_item">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="ns" type="xs:string"/>
+      <xs:element name="cantidad" type="xs:integer"/>
+      <xs:element name="categoria" type="xs:string" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

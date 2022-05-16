@@ -1,7 +1,7 @@
 # XML Schema para `e1.xml`
 - El inventario puede no tener espacios
 - Los elementos `responsable` y `mail` son obligatorios. `tel` no es obligatorio y pueden aparacer hasta 3 distintos.
-- `tel` tiene el atributo obligatorio `tipo`. `tipo` puede tener como valores `personal`, `trabajo` o `móvil`.
+- `tel` tiene el atributo obligatorio `tipo`. `tipo` puede tener como valores `particular`, `trabajo` o `móvil`.
 - `tel` tiene un formato definido: contiene entre 4 y 8 dígitos.
 - Todos los espacios tienen un `nombre`, `responsable` y un número variable de elementos `item`.
 - Los `espacio` tienen un código que no se puede repetir.

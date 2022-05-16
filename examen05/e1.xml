@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="e1.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <inventario>
   <responsable>Amanda Smith</responsable>
   <mail>amanda@local.com</mail>
