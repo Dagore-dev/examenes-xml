@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<quiz lang="en">
+  <owner email="js@local.com">John Smith</owner>
+  <category>
+    <name>
+      <text>Bloque XML</text>
+    </name>
+    <label>XML</label>
+    <label>TI</label>
+    <label> Review </label>
+    <question type="truefalse" code="XML-123">
+      <name>
+        <text>DTDs y  tipos de datos</text>
+      </name>
+      <questiontext>
+        <text>¿Permite una DTD definir tipos de datos</text>
+      </questiontext>
+
+      <answer fraction="0">
+        <text>Verdadero</text>
+        <feedback>
+          <text format="markdown">##Me temo que para eso hay que utilizar XSD</text>
+        </feedback>
+      </answer>
+      <answer fraction="100">
+        <text>Falso</text>
+        <feedback>
+          <text format="html">¡Correcto!</text>
+        </feedback>
+      </answer>
+    </question>
+    <question type="multichoice" code="XML-124">
+      <name>
+        <text>XML y  validación</text>
+      </name>
+      <questiontext>
+        <text>¿Cómo podemos validar una fichero XML?</text>
+      </questiontext>
+      <answer fraction="10">
+        <text>XSLT</text>
+        <feedback>
+          <text>¡Ooops!</text>
+        </feedback>
+      </answer>
+      <answer fraction="10.00">
+        <text>XSD</text>
+        <feedback>
+          <text>¡Correcto!</text>
+        </feedback>
+      </answer>
+      <answer fraction="50.00">
+        <text>DTD</text>
+        <feedback>
+          <text>¡Ooops!</text>
+        </feedback>
+      </answer>
+
+      <shuffleanswers>true</shuffleanswers>
+      <answernumbering>abc</answernumbering>
+    </question>
+  </category>
+  <category>
+    <name>
+      <text>Bloque HTML</text>
+    </name>
+    <label>HTML</label>
+  </category>
+</quiz>
+<!--   -->

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<examen>
+  <idioma>Inglés</idioma>
+  <correo nombre="John Smith">js@local.com</correo>
+  <test>
+    <tema>
+      <titulo>Bloque HTML</titulo>
+      <!--Tema sin preguntas-->
+    </tema>
+    <tema>
+      <titulo>Bloque XML</titulo>
+      <pregunta>
+        <enunciado>¿Cómo podemos validar una fichero XML?</enunciado>
+        <opcion>1.DTD</opcion>
+        <opcion>2.XSLT</opcion>
+        <opcion>3.XSD</opcion>
+      </pregunta>
+      <pregunta>
+        <enunciado>¿Permite una DTD definir tipos de datos</enunciado>
+        <opcion>1.Falso</opcion>
+        <opcion>2.Verdadero</opcion>
+      </pregunta>
+    </tema>
+  </test>
+</examen>

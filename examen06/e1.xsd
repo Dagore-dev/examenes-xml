@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  
+  <xs:element name="quiz" type="Tquiz"/>
+  
+  <xs:complexType name="Tquiz">
+    <xs:sequence>
+      <xs:element name="owner" type="Towner"/>
+      <xs:element name="category" type="Tcategory" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="lang" type="xs:string" />
+  </xs:complexType>
+  
+  <xs:complexType name="Towner">
+      <xs:simpleContent>
+           <xs:extension base="xs:string">
+               <xs:attribute name="email" type="xs:string" />
+           </xs:extension>
+      </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:complexType name="Tcategory">
+    <xs:sequence>
+       <xs:element name="name" type="Tname" />
+       <xs:element name="label" type="xs:string" maxOccurs="unbounded"/>
+       <xs:element name="question" type="Tquestion" minOccurs="0"  maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+   <xs:complexType name="Tname">
+    <xs:sequence>
+       <xs:element name="text" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+   <xs:complexType name="Tquestion">
+    <xs:sequence>
+       <xs:element name="name" type="Tname" />
+       <xs:element name="questiontext" type="xs:string" />
+       <xs:element name="answer" type="Tanswer" minOccurs="2" maxOccurs="4" />     
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" />
+    <xs:attribute name="code" type="xs:string" />    
+  </xs:complexType>  
+  
+     <xs:complexType name="Tanswer">
+          <xs:sequence>
+             <xs:element name="text" type="xs:string" />
+             <xs:element name="feedback" type="xs:string" />
+          </xs:sequence>
+          <xs:attribute name="fraction" type="xs:decimal" />
+   </xs:complexType>      
+</xs:schema>
