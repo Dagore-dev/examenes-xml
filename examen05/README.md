@@ -11,7 +11,8 @@
 - El nuevo elemento raíz es `listado`.
 - El responsable del inventario pasa a ser un elemento `mantiene` con el valor del elemento `mail` en un atributo `correo`.
 - Se listan todos los elementos `tel`, si el telefono es tipo `particular` en su lugar se utiliza el elemento `particular`.
-- Los responsables de cada espacio se muestran numerados y separados por comas dentro de un elemento `resposnsables`.
+- Los responsables de cada espacio se muestran numerados y separados por comas dentro de un elemento `responsables`.
 - Se genera el elemento `detalle` que contendrá los espacios tras la transformación.
-- Cada espacio genera un comentario con los espacios formateados como: `Espacio aula-xx: <nombre del espacio>`.
+- Cada espacio genera un comentario con los espacios formateados como: `Espacio <code>: <nombre del espacio>`.
 - Después se listan elementos `item` con cantidad distinta de cero. Contiene la cantidad y nombre directamente como texto.
+- Los elemento `item` se muestran ordenados de menor a mayor cantidad.
