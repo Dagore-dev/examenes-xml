@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Agencia: Viajes Romero-->
+<ofertas>
+  <oferta>
+    <destino tipo="Estudios">Dublín. Del 2022-06-02 al 2022-06-09</destino>
+    <id>D-001</id>
+    <precio moneda="euros">1300</precio>
+    <visita>
+      <a href="https://www.tcd.ie/visitors/book-of-kells">(1) The Book of Kells and the Old Library Exhibition</a>
+      <descr>Cultural</descr>
+    </visita>
+    <visita>
+      <a href="https://thetemplebarpub.com/">(2) Temple Bar</a>
+      <descr>Música ~ Ocio</descr>
+    </visita>
+    <visita>
+      <a href="https://www.graftonstreet.ie/">(3) Grafton Street</a>
+      <descr>Arte ~ Compras</descr>
+    </visita>
+  </oferta>
+  <oferta>
+    <destino tipo="Ruta">Jaen. Del 2021-10-03 al 2021-10-06</destino>
+    <id>J-004</id>
+    <precio moneda="libras">999</precio>
+    <visita>
+      <a href="http://ubeda.com/rutas.html">(1) Úbeda y Baeza</a>
+      <descr>Histórico ~ Monumental</descr>
+    </visita>
+    <visita>
+      <a href="http://jaen.es/castillo">(2) Castillo de Santa Catalina</a>
+      <descr>Ciudad ~ Histórico ~ Monumental</descr>
+    </visita>
+  </oferta>
+  <oferta>
+    <destino tipo="Citi Break">Oporto. Del 2021-04-12 al 2021-04-17</destino>
+    <id>P-001</id>
+    <precio moneda="euros">425.5</precio>
+    <visita>
+      <a href="http://clerigos.com">(1) Iglesia y Torre de los Clérigos</a>
+      <descr>Cultural ~ Monumental</descr>
+    </visita>
+    <visita>
+      <a href="http://local.com">(2) Bodega Sandeman</a>
+      <descr>Enológico ~ Histórico</descr>
+    </visita>
+  </oferta>
+</ofertas>
